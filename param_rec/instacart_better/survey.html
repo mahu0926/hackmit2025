@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCart - Welcome Survey</title>
+    <link rel="stylesheet" href="survey-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="survey-container">
+        <div class="survey-card">
+            <div class="survey-header">
+                <div class="logo">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>FreshCart</span>
+                </div>
+                <h1>Welcome to FreshCart!</h1>
+                <p>Help us personalize your shopping experience</p>
+            </div>
+
+            <form class="survey-form" id="surveyForm">
+                <!-- Question 1: Dietary Preferences -->
+                <div class="question-group">
+                    <h3>What are your dietary preferences?</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="vegetarian">
+                            <span class="checkmark"></span>
+                            Vegetarian
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="vegan">
+                            <span class="checkmark"></span>
+                            Vegan
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="gluten-free">
+                            <span class="checkmark"></span>
+                            Gluten-Free
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="keto">
+                            <span class="checkmark"></span>
+                            Keto
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="organic">
+                            <span class="checkmark"></span>
+                            Prefer Organic
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="none">
+                            <span class="checkmark"></span>
+                            No specific preferences
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2: Shopping Frequency -->
+                <div class="question-group">
+                    <h3>How often do you grocery shop?</h3>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="frequency" value="daily">
+                            <span class="radio-mark"></span>
+                            Daily
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="frequency" value="weekly">
+                            <span class="radio-mark"></span>
+                            Weekly
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="frequency" value="bi-weekly">
+                            <span class="radio-mark"></span>
+                            Bi-weekly
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="frequency" value="monthly">
+                            <span class="radio-mark"></span>
+                            Monthly
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3: Budget Range -->
+                <div class="question-group">
+                    <h3>What's your typical grocery budget per trip?</h3>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="budget" value="under-50">
+                            <span class="radio-mark"></span>
+                            Under $50
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="budget" value="50-100">
+                            <span class="radio-mark"></span>
+                            $50 - $100
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="budget" value="100-200">
+                            <span class="radio-mark"></span>
+                            $100 - $200
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="budget" value="over-200">
+                            <span class="radio-mark"></span>
+                            Over $200
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 4: Favorite Categories -->
+                <div class="question-group">
+                    <h3>What are your favorite grocery categories?</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="categories" value="produce">
+                            <span class="checkmark"></span>
+                            Fresh Produce
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="categories" value="dairy">
+                            <span class="checkmark"></span>
+                            Dairy & Eggs
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="categories" value="meat">
+                            <span class="checkmark"></span>
+                            Meat & Seafood
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="categories" value="bakery">
+                            <span class="checkmark"></span>
+                            Bakery
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="categories" value="beverages">
+                            <span class="checkmark"></span>
+                            Beverages
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="categories" value="snacks">
+                            <span class="checkmark"></span>
+                            Snacks
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 5: Delivery Preference -->
+                <div class="question-group">
+                    <h3>How would you like to receive your groceries?</h3>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="delivery" value="delivery">
+                            <span class="radio-mark"></span>
+                            Home Delivery
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="delivery" value="pickup">
+                            <span class="radio-mark"></span>
+                            Store Pickup
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="delivery" value="both">
+                            <span class="radio-mark"></span>
+                            Both options
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 6: Special Requirements -->
+                <div class="question-group">
+                    <h3>Any special requirements or allergies?</h3>
+                    <textarea name="special" placeholder="Please list any allergies, dietary restrictions, or special requirements..."></textarea>
+                </div>
+
+                <div class="survey-actions">
+                    <button type="button" class="btn-skip" onclick="skipSurvey()">Skip Survey</button>
+                    <button type="submit" class="btn-continue">Continue Shopping</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="survey-script.js"></script>
+</body>
+</html>

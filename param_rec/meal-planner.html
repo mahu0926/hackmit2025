@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCart - AI Meal Planner</title>
+    <link rel="stylesheet" href="meal-planner-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="meal-planner-container">
+        <!-- Header -->
+        <header class="meal-planner-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>AI Meal Planner</span>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-secondary" onclick="goToShopping()">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Continue Shopping</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="meal-planner-main">
+            <div class="container">
+                <!-- User Profile Summary -->
+                <div class="profile-summary" id="profileSummary">
+                    <!-- Profile data will be loaded here -->
+                </div>
+
+                <!-- Meal Plan Generation -->
+                <div class="meal-plan-section">
+                    <div class="section-header">
+                        <h2>Your Personalized Meal Plan</h2>
+                        <p>AI-generated meal suggestions based on your preferences and goals</p>
+                        <button class="btn-generate" id="generateMealPlan">
+                            <i class="fas fa-magic"></i>
+                            Generate Meal Plan
+                        </button>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div class="loading-state" id="loadingState" style="display: none;">
+                        <div class="loading-spinner"></div>
+                        <h3>Creating your personalized meal plan...</h3>
+                        <p>Our AI is analyzing your preferences and generating recommendations</p>
+                    </div>
+
+                    <!-- Meal Plan Results -->
+                    <div class="meal-plan-results" id="mealPlanResults" style="display: none;">
+                        <!-- Generated meal plan will appear here -->
+                    </div>
+                </div>
+
+                <!-- Grocery List -->
+                <div class="grocery-list-section" id="groceryListSection" style="display: none;">
+                    <div class="section-header">
+                        <h2>Your Grocery List</h2>
+                        <p>All ingredients needed for your meal plan</p>
+                        <div class="grocery-actions">
+                            <button class="btn-add-all" id="addAllToCart">
+                                <i class="fas fa-cart-plus"></i>
+                                Add All to Cart
+                            </button>
+                            <button class="btn-export" id="exportList">
+                                <i class="fas fa-download"></i>
+                                Export List
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grocery-list" id="groceryList">
+                        <!-- Grocery items will be listed here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="meal-planner-script.js"></script>
+</body>
+</html>

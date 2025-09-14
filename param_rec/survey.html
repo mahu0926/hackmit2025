@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCart - Personalization Survey</title>
+    <link rel="stylesheet" href="survey-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="survey-container">
+        <div class="survey-card">
+            <div class="survey-header">
+                <div class="logo">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>FreshCart</span>
+                </div>
+                <h1>Let's Get to Know You!</h1>
+                <p>Help us personalize your shopping experience</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <form class="survey-form" id="surveyForm">
+                <!-- Question 1: Name -->
+                <div class="question-group active" data-question="1">
+                    <h3>What's your name?</h3>
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Enter your full name" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="question-navigation">
+                        <button type="button" class="btn-next" onclick="nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <!-- Question 2: Age -->
+                <div class="question-group" data-question="2">
+                    <h3>What's your age?</h3>
+                    <div class="age-options">
+                        <label class="age-option">
+                            <input type="radio" name="age" value="18-24">
+                            <span class="age-range">18-24</span>
+                        </label>
+                        <label class="age-option">
+                            <input type="radio" name="age" value="25-34">
+                            <span class="age-range">25-34</span>
+                        </label>
+                        <label class="age-option">
+                            <input type="radio" name="age" value="35-44">
+                            <span class="age-range">35-44</span>
+                        </label>
+                        <label class="age-option">
+                            <input type="radio" name="age" value="45-54">
+                            <span class="age-range">45-54</span>
+                        </label>
+                        <label class="age-option">
+                            <input type="radio" name="age" value="55-64">
+                            <span class="age-range">55-64</span>
+                        </label>
+                        <label class="age-option">
+                            <input type="radio" name="age" value="65+">
+                            <span class="age-range">65+</span>
+                        </label>
+                    </div>
+                    <div class="question-navigation">
+                        <button type="button" class="btn-prev" onclick="prevQuestion()">Previous</button>
+                        <button type="button" class="btn-next" onclick="nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <!-- Question 3: Favorite Cuisine -->
+                <div class="question-group" data-question="3">
+                    <h3>What cuisine is your favorite?</h3>
+                    <div class="cuisine-grid">
+                        <label class="cuisine-option">
+                            <input type="checkbox" name="cuisine" value="italian">
+                            <div class="cuisine-card">
+                                <i class="fas fa-pizza-slice"></i>
+                                <span>Italian</span>
+                            </div>
+                        </label>
+                        <label class="cuisine-option">
+                            <input type="checkbox" name="cuisine" value="mexican">
+                            <div class="cuisine-card">
+                                <i class="fas fa-pepper-hot"></i>
+                                <span>Mexican</span>
+                            </div>
+                        </label>
+                        <label class="cuisine-option">
+                            <input type="checkbox" name="cuisine" value="chinese">
+                            <div class="cuisine-card">
+                                <i class="fas fa-bowl-food"></i>
+                                <span>Chinese</span>
+                            </div>
+                        </label>
+                        <label class="cuisine-option">
+                            <input type="checkbox" name="cuisine" value="indian">
+                            <div class="cuisine-card">
+                                <i class="fas fa-pepper-hot"></i>
+                                <span>Indian</span>
+                            </div>
+                        </label>
+                        <label class="cuisine-option">
+                            <input type="checkbox" name="cuisine" value="japanese">
+                            <div class="cuisine-card">
+                                <i class="fas fa-fish"></i>
+                                <span>Japanese</span>
+                            </div>
+                        </label>
+                        <label class="cuisine-option">
+                            <input type="checkbox" name="cuisine" value="thai">
+                            <div class="cuisine-card">
+                                <i class="fas fa-pepper-hot"></i>
+                                <span>Thai</span>
+                            </div>
+                        </label>
+                        <label class="cuisine-option">
+                            <input type="checkbox" name="cuisine" value="mediterranean">
+                            <div class="cuisine-card">
+                                <i class="fas fa-leaf"></i>
+                                <span>Mediterranean</span>
+                            </div>
+                        </label>
+                        <label class="cuisine-option">
+                            <input type="checkbox" name="cuisine" value="american">
+                            <div class="cuisine-card">
+                                <i class="fas fa-hamburger"></i>
+                                <span>American</span>
+                            </div>
+                        </label>
+                        <label class="cuisine-option">
+                            <input type="checkbox" name="cuisine" value="french">
+                            <div class="cuisine-card">
+                                <i class="fas fa-bread-slice"></i>
+                                <span>French</span>
+                            </div>
+                        </label>
+                        <label class="cuisine-option">
+                            <input type="checkbox" name="cuisine" value="korean">
+                            <div class="cuisine-card">
+                                <i class="fas fa-pepper-hot"></i>
+                                <span>Korean</span>
+                            </div>
+                        </label>
+                        <label class="cuisine-option">
+                            <input type="checkbox" name="cuisine" value="middle-eastern">
+                            <div class="cuisine-card">
+                                <i class="fas fa-pepper-hot"></i>
+                                <span>Middle Eastern</span>
+                            </div>
+                        </label>
+                        <label class="cuisine-option">
+                            <input type="checkbox" name="cuisine" value="other">
+                            <div class="cuisine-card">
+                                <i class="fas fa-ellipsis-h"></i>
+                                <span>Other</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="question-navigation">
+                        <button type="button" class="btn-prev" onclick="prevQuestion()">Previous</button>
+                        <button type="button" class="btn-next" onclick="nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <!-- Question 4: Health Data Access -->
+                <div class="question-group" data-question="4">
+                    <h3>Please give us access to connect health data</h3>
+                    <p class="question-description">This helps us provide better nutritional recommendations and track your health goals.</p>
+                    <div class="health-data-options">
+                        <label class="health-option">
+                            <input type="radio" name="healthData" value="yes">
+                            <div class="health-card">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Yes, I agree</span>
+                                <small>Allow access to health data</small>
+                            </div>
+                        </label>
+                        <label class="health-option">
+                            <input type="radio" name="healthData" value="no">
+                            <div class="health-card">
+                                <i class="fas fa-times-circle"></i>
+                                <span>No, thanks</span>
+                                <small>Skip health data access</small>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="question-navigation">
+                        <button type="button" class="btn-prev" onclick="prevQuestion()">Previous</button>
+                        <button type="button" class="btn-next" onclick="nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <!-- Question 5: Food Goals -->
+                <div class="question-group" data-question="5">
+                    <h3>What are your food goals?</h3>
+                    <p class="question-description">Select all that apply to help us recommend the right products for you.</p>
+                    <div class="goals-grid">
+                        <label class="goal-option">
+                            <input type="checkbox" name="goals" value="improve-diet">
+                            <div class="goal-card">
+                                <i class="fas fa-heart"></i>
+                                <span>Improve Diet</span>
+                            </div>
+                        </label>
+                        <label class="goal-option">
+                            <input type="checkbox" name="goals" value="weight-loss">
+                            <div class="goal-card">
+                                <i class="fas fa-weight"></i>
+                                <span>Weight Loss</span>
+                            </div>
+                        </label>
+                        <label class="goal-option">
+                            <input type="checkbox" name="goals" value="weight-gain">
+                            <div class="goal-card">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>Weight Gain</span>
+                            </div>
+                        </label>
+                        <label class="goal-option">
+                            <input type="checkbox" name="goals" value="muscle-building">
+                            <div class="goal-card">
+                                <i class="fas fa-dumbbell"></i>
+                                <span>Muscle Building</span>
+                            </div>
+                        </label>
+                        <label class="goal-option">
+                            <input type="checkbox" name="goals" value="energy-boost">
+                            <div class="goal-card">
+                                <i class="fas fa-bolt"></i>
+                                <span>Energy Boost</span>
+                            </div>
+                        </label>
+                        <label class="goal-option">
+                            <input type="checkbox" name="goals" value="better-sleep">
+                            <div class="goal-card">
+                                <i class="fas fa-moon"></i>
+                                <span>Better Sleep</span>
+                            </div>
+                        </label>
+                        <label class="goal-option">
+                            <input type="checkbox" name="goals" value="digestive-health">
+                            <div class="goal-card">
+                                <i class="fas fa-stomach"></i>
+                                <span>Digestive Health</span>
+                            </div>
+                        </label>
+                        <label class="goal-option">
+                            <input type="checkbox" name="goals" value="heart-health">
+                            <div class="goal-card">
+                                <i class="fas fa-heartbeat"></i>
+                                <span>Heart Health</span>
+                            </div>
+                        </label>
+                        <label class="goal-option">
+                            <input type="checkbox" name="goals" value="mental-clarity">
+                            <div class="goal-card">
+                                <i class="fas fa-brain"></i>
+                                <span>Mental Clarity</span>
+                            </div>
+                        </label>
+                        <label class="goal-option">
+                            <input type="checkbox" name="goals" value="immune-support">
+                            <div class="goal-card">
+                                <i class="fas fa-shield-virus"></i>
+                                <span>Immune Support</span>
+                            </div>
+                        </label>
+                        <label class="goal-option">
+                            <input type="checkbox" name="goals" value="sustainable-eating">
+                            <div class="goal-card">
+                                <i class="fas fa-leaf"></i>
+                                <span>Sustainable Eating</span>
+                            </div>
+                        </label>
+                        <label class="goal-option">
+                            <input type="checkbox" name="goals" value="maintain-current">
+                            <div class="goal-card">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>Maintain Current Health</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="question-navigation">
+                        <button type="button" class="btn-prev" onclick="prevQuestion()">Previous</button>
+                        <button type="button" class="btn-next" onclick="nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <!-- Question 6: Dietary Restrictions -->
+                <div class="question-group" data-question="6">
+                    <h3>Any dietary restrictions or medical conditions?</h3>
+                    <p class="question-description">This information helps us ensure your safety and provide appropriate recommendations.</p>
+                    <div class="restrictions-grid">
+                        <label class="restriction-option">
+                            <input type="checkbox" name="restrictions" value="diabetes">
+                            <div class="restriction-card">
+                                <i class="fas fa-tint"></i>
+                                <span>Diabetes</span>
+                            </div>
+                        </label>
+                        <label class="restriction-option">
+                            <input type="checkbox" name="restrictions" value="high-blood-pressure">
+                            <div class="restriction-card">
+                                <i class="fas fa-heartbeat"></i>
+                                <span>High Blood Pressure</span>
+                            </div>
+                        </label>
+                        <label class="restriction-option">
+                            <input type="checkbox" name="restrictions" value="celiac-disease">
+                            <div class="restriction-card">
+                                <i class="fas fa-bread-slice"></i>
+                                <span>Celiac Disease</span>
+                            </div>
+                        </label>
+                        <label class="restriction-option">
+                            <input type="checkbox" name="restrictions" value="lactose-intolerance">
+                            <div class="restriction-card">
+                                <i class="fas fa-milk"></i>
+                                <span>Lactose Intolerance</span>
+                            </div>
+                        </label>
+                        <label class="restriction-option">
+                            <input type="checkbox" name="restrictions" value="nut-allergy">
+                            <div class="restriction-card">
+                                <i class="fas fa-seedling"></i>
+                                <span>Nut Allergy</span>
+                            </div>
+                        </label>
+                        <label class="restriction-option">
+                            <input type="checkbox" name="restrictions" value="shellfish-allergy">
+                            <div class="restriction-card">
+                                <i class="fas fa-fish"></i>
+                                <span>Shellfish Allergy</span>
+                            </div>
+                        </label>
+                        <label class="restriction-option">
+                            <input type="checkbox" name="restrictions" value="soy-allergy">
+                            <div class="restriction-card">
+                                <i class="fas fa-seedling"></i>
+                                <span>Soy Allergy</span>
+                            </div>
+                        </label>
+                        <label class="restriction-option">
+                            <input type="checkbox" name="restrictions" value="egg-allergy">
+                            <div class="restriction-card">
+                                <i class="fas fa-egg"></i>
+                                <span>Egg Allergy</span>
+                            </div>
+                        </label>
+                        <label class="restriction-option">
+                            <input type="checkbox" name="restrictions" value="vegetarian">
+                            <div class="restriction-card">
+                                <i class="fas fa-leaf"></i>
+                                <span>Vegetarian</span>
+                            </div>
+                        </label>
+                        <label class="restriction-option">
+                            <input type="checkbox" name="restrictions" value="vegan">
+                            <div class="restriction-card">
+                                <i class="fas fa-leaf"></i>
+                                <span>Vegan</span>
+                            </div>
+                        </label>
+                        <label class="restriction-option">
+                            <input type="checkbox" name="restrictions" value="keto">
+                            <div class="restriction-card">
+                                <i class="fas fa-bacon"></i>
+                                <span>Keto Diet</span>
+                            </div>
+                        </label>
+                        <label class="restriction-option">
+                            <input type="checkbox" name="restrictions" value="paleo">
+                            <div class="restriction-card">
+                                <i class="fas fa-drumstick-bite"></i>
+                                <span>Paleo Diet</span>
+                            </div>
+                        </label>
+                        <label class="restriction-option">
+                            <input type="checkbox" name="restrictions" value="none">
+                            <div class="restriction-card">
+                                <i class="fas fa-check"></i>
+                                <span>None</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="question-navigation">
+                        <button type="button" class="btn-prev" onclick="prevQuestion()">Previous</button>
+                        <button type="button" class="btn-next" onclick="nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+                <!-- Final Question: Additional Info -->
+                <div class="question-group" data-question="7">
+                    <h3>Any additional information?</h3>
+                    <p class="question-description">Tell us anything else that might help us personalize your experience.</p>
+                    <div class="input-group">
+                        <textarea name="additionalInfo" placeholder="Share any other dietary preferences, cooking habits, or special requirements..."></textarea>
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    <div class="question-navigation">
+                        <button type="button" class="btn-prev" onclick="prevQuestion()">Previous</button>
+                        <button type="submit" class="btn-submit">Complete Survey</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="survey-script.js"></script>
+</body>
+</html>
